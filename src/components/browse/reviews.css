@@ -1,0 +1,2 @@
+.item-card-rating { display: flex; align-items: center; gap: 5px; margin: 0 0 11px; color: #899289; font-size: 8px; }
+.item-card-rating strong { color: var(--color-ink); font-size: 9px; }

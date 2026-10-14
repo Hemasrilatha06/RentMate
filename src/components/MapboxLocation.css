@@ -1,0 +1,66 @@
+.mapbox-map-shell { width:100%; min-width:0; overflow:hidden; border:1px solid #263642; border-radius:16px; background:#0b141c; box-shadow:0 14px 34px rgba(4,12,18,.18); }
+.mapbox-view { width:100%; min-height:150px; overflow:hidden; background:#0b141c; }
+.mapbox-view.is-prominent-map { width:100%; height:min(60vh,600px); min-height:500px; }
+.booking-detail-layout.has-route-map { grid-template-columns:minmax(0,1fr); }
+.mapbox-route-summary { display:flex; align-items:center; gap:14px; min-height:66px; padding:12px 16px; color:#eef7f7; background:linear-gradient(110deg,#101e27,#14232c); }
+.mapbox-route-endpoint { display:flex; align-items:center; gap:9px; min-width:0; }
+.mapbox-route-endpoint > span:last-child { display:grid; gap:3px; min-width:0; }
+.mapbox-route-endpoint small { color:#91a7af; font-size:8px; font-weight:750; letter-spacing:1.2px; }
+.mapbox-route-endpoint strong { overflow:hidden; color:#f2f8f8; font-size:11px; font-weight:650; text-overflow:ellipsis; white-space:nowrap; }
+.mapbox-route-dot { display:block; width:10px; height:10px; flex:0 0 auto; border:2px solid #d9fffa; border-radius:50%; box-shadow:0 0 12px currentColor; }
+.mapbox-route-dot-origin { color:#43e6d0; background:#43e6d0; }
+.mapbox-route-dot-destination { color:#a88bff; background:#8c70f3; }
+.mapbox-route-connector { width:22px; height:1px; flex:0 0 auto; background:linear-gradient(90deg,#43e6d0,#8c70f3); }
+.mapbox-route-metrics { display:grid; gap:3px; margin-left:auto; padding-left:14px; border-left:1px solid #30414a; text-align:right; white-space:nowrap; }
+.mapbox-route-metrics strong { color:#62ead9; font-size:12px; }
+.mapbox-route-metrics span { color:#a9bdc2; font-size:10px; }
+.mapbox-route-status { margin-left:auto; color:#a9bdc2; font-size:10px; text-align:right; }
+.mapbox-pin { position:relative; display:block; width:28px; height:28px; border:2px solid rgba(255,255,255,.92); border-radius:50%; background:#43e6d0; box-shadow:0 0 0 5px rgba(67,230,208,.17),0 5px 16px rgba(0,0,0,.48); }
+.mapbox-pin::after { position:absolute; inset:7px; border-radius:50%; background:#09212a; content:''; }
+.mapbox-pin--item { background:#43e6d0; box-shadow:0 0 0 5px rgba(67,230,208,.17),0 5px 16px rgba(0,0,0,.48); }
+.mapbox-pin--renter { background:#9c83ff; box-shadow:0 0 0 5px rgba(156,131,255,.2),0 5px 16px rgba(0,0,0,.48); }
+.mapbox-pin--renter::after { background:#211747; }
+.mapbox-pin--meeting { background:#f3c66e; box-shadow:0 0 0 5px rgba(243,198,110,.2),0 5px 16px rgba(0,0,0,.48); }
+.mapbox-pin--meeting::after { background:#3b2c0e; }
+.mapbox-map-shell .mapboxgl-ctrl-group { overflow:hidden; border:1px solid rgba(177,205,213,.24); border-radius:10px; background:rgba(12,24,32,.92); box-shadow:0 4px 14px rgba(0,0,0,.3); }
+.mapbox-map-shell .mapboxgl-ctrl-group button { width:34px; height:34px; background-color:transparent; }
+.mapbox-map-shell .mapboxgl-ctrl-group button + button { border-top:1px solid rgba(177,205,213,.18); }
+.mapbox-map-shell .mapboxgl-ctrl-group button:hover { background-color:rgba(87,225,210,.13); }
+.mapbox-map-shell .mapboxgl-ctrl-group button .mapboxgl-ctrl-icon { filter:invert(1) brightness(1.7); }
+.mapbox-map-shell .mapboxgl-ctrl-attrib { color:#c1d0d3; background:rgba(10,20,27,.82); }
+.mapbox-map-shell .mapboxgl-ctrl-attrib a { color:#8fe8df; }
+@media (max-width:520px) {
+  .mapbox-route-summary { gap:8px; min-height:60px; padding:10px; }
+  .mapbox-route-endpoint { gap:6px; }
+  .mapbox-route-endpoint strong { max-width:92px; font-size:10px; }
+  .mapbox-route-connector { width:12px; }
+  .mapbox-route-metrics { padding-left:8px; }
+  .mapbox-route-metrics strong { font-size:11px; }
+  .mapbox-route-metrics span { font-size:9px; }
+}
+@media (max-width:700px) {
+  .mapbox-view.is-prominent-map { height:clamp(350px,60vh,450px); min-height:350px; }
+  .mapbox-route-summary { flex-wrap:wrap; }
+  .mapbox-route-status { flex-basis:100%; margin-left:0; text-align:left; }
+  .mapbox-map-shell .mapboxgl-ctrl-group button { width:40px; height:40px; }
+}
+.mapbox-unconfigured { min-height: 120px; display:grid; place-items:center; padding:20px; border:1px dashed #b8bdd3; border-radius:16px; color:#555f79; background:#f7f7fb; font-size:13px; text-align:center; }
+.location-map-field, .address-search-field { display:grid; gap:9px; min-width:0; }
+.location-map-help { margin:0; color:#626b7f; font-size:12px; line-height:1.5; }
+.location-map-geolocate, .address-current-button { justify-self:start; min-height:38px; padding:0 14px; border:1px solid #d9dcf0; border-radius:999px; color:#4338ca; background:#f5f4ff; font:600 12px var(--font-body); cursor:pointer; }
+.location-map-geolocate:hover, .address-current-button:hover { background:#ecebff; }
+.location-map-geolocate:focus-visible, .address-current-button:focus-visible { outline:3px solid #4F46E566; outline-offset:2px; }
+.location-map-error { margin:0; color:#a43b47; font-size:12px; }
+.address-search-label { color:var(--color-ink,#111827); font-size:12px; font-weight:650; }
+.address-search-field mapbox-search-box { width:100%; }
+.address-search-fallback { width:100%; min-height:44px; padding:10px 13px; border:1px solid #d8dbea; border-radius:12px; background:#fff; font:14px var(--font-body); }
+.distance-badge { display:inline-flex; align-items:center; width:max-content; max-width:100%; padding:6px 10px; border:1px solid #dedcff; border-radius:999px; color:#4338ca; background:#f2f1ff; font-size:11px; font-weight:650; }
+.booking-save-default { display:flex; align-items:center; gap:9px; color:#30384b; font-size:12px; }
+.spot-agreed-badge { display:inline-flex; width:max-content; margin:0; padding:7px 12px; border:1px solid #b8e5d0; border-radius:999px; color:#126143; background:#edfaf3; font-size:12px; font-weight:700; }
+.spot-agreement-panel { display:flex; align-items:center; gap:12px; flex-wrap:wrap; padding:12px; border:1px solid #e7d8a8; border-radius:14px; background:#fffbeb; }
+.spot-agreement-panel p { margin:0; color:#554b31; font-size:13px; }
+.details-exact-pickup { margin-top:18px; padding-top:14px; border-top:1px solid #e9eaf0; }
+.details-exact-pickup p { margin:5px 0 0; color:#333b4d; font-size:13px; line-height:1.5; }
+.booking-location-fields { display:grid; gap:11px; margin-top:14px; }
+.booking-location-fields > label { color:var(--color-ink,#111827); font-size:12px; font-weight:650; }
+.booking-location-fields input, .booking-edit-field input, .booking-edit-field textarea { width:100%; min-width:0; min-height:42px; padding:10px 11px; border:1px solid #e2e5ee; border-radius:10px; color:var(--color-ink,#111827); background:#fff; font:13px var(--font-body); }

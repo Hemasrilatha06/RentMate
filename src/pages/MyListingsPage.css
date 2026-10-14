@@ -1,0 +1,75 @@
+.my-listings-page { min-height: calc(100vh - 76px); padding: 54px 28px 78px; background: var(--color-cream); }
+.my-listings-container { width: min(100%, 1120px); margin: 0 auto; }
+.my-listings-heading { margin-bottom: 31px; }
+.my-listings-heading h1 { margin: 10px 0 7px; color: var(--color-ink); font: 500 clamp(40px, 5vw, 58px)/1.05 var(--font-display); letter-spacing: -1.4px; }
+.my-listings-heading h1 span { color: var(--color-moss); }
+.my-listings-heading > p { margin: 0; color: #77827a; font-size: 12px; line-height: 1.7; }
+.my-listings-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: start; }
+.my-listing-card { overflow: hidden; border: 1px solid rgba(32,42,37,.07); border-radius: var(--radius-md); background: var(--color-paper); box-shadow: var(--shadow-soft); }
+.my-listing-photo-wrap { position: relative; overflow: hidden; aspect-ratio: 1.9; background: #edf0e9; }
+.my-listing-photo, .my-listing-photo-placeholder { display: block; width: 100%; height: 100%; object-fit: cover; }
+.my-listing-photo-placeholder { display: grid; place-items: center; color: #47755b; background: radial-gradient(circle at 65% 35%, #f9f8ef, #e6ecdf 68%); }
+.my-listing-photo-placeholder span, .my-listings-empty-mark { display: grid; place-items: center; width: 50px; height: 50px; border: 1px solid #d5e0cf; border-radius: 50% 50% 50% 15%; background: rgba(255,254,250,.65); font: italic 32px var(--font-display); transform: rotate(-7deg); }
+.my-listing-status { position: absolute; top: 14px; right: 14px; padding: 7px 11px; border: 1px solid rgba(255,255,255,.55); border-radius: var(--radius-pill); backdrop-filter: blur(12px); font-size: 9px; font-weight: 700; letter-spacing: .5px; }
+.my-listing-status.is-active { color: #174b3e; background: rgba(238,247,229,.92); }
+.my-listing-status.is-inactive { color: #695e4c; background: rgba(248,241,225,.94); }
+.my-listing-content { padding: 20px; }
+.my-listing-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.my-listing-title-row h2 { margin: 6px 0 0; color: var(--color-ink); font: 500 clamp(20px, 2vw, 25px)/1.2 var(--font-display); }
+.my-listing-price { flex: 0 0 auto; margin: 6px 0 0; color: #849087; font-size: 9px; text-align: right; }
+.my-listing-price strong { color: var(--color-forest); font-size: 15px; }
+.my-listing-availability { margin-top: 18px; padding: 13px 14px; border: 1px solid #edf0e9; border-radius: var(--radius-sm); background: #fbfbf7; }
+.my-listing-availability p { margin: 5px 0 0; color: #58665c; font-size: 11px; }
+.my-listing-actions { display: flex; align-items: center; gap: 10px; margin-top: 15px; }
+.my-listing-edit { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 0 13px; border: 1px solid #dce6d7; border-radius: var(--radius-sm); color: var(--color-forest); font-size: 10px; font-weight: 700; text-decoration: none; }
+.my-listing-edit:hover { background: #f4f7ef; }
+.my-listing-actions .my-listing-toggle, .my-listing-return { min-height: 38px; padding: 0 14px; font-size: 10px; }
+.my-listing-delete { min-height: 38px; padding: 0 13px; border: 1px solid #f0ddda; border-radius: var(--radius-sm); color: #9b5149; background: transparent; cursor: pointer; font-size: 10px; font-weight: 600; }
+.my-listing-delete:hover:not(:disabled) { background: #fbf0ed; }
+.my-listing-delete:disabled { cursor: wait; opacity: .55; }
+.my-listing-bookings { margin-top: 17px; border-top: 1px solid #eaede6; }
+.my-listing-bookings summary { display: flex; align-items: center; justify-content: space-between; min-height: 48px; color: var(--color-forest); cursor: pointer; font-size: 11px; font-weight: 700; list-style: none; }
+.my-listing-bookings summary::-webkit-details-marker { display: none; }
+.my-listing-bookings summary::after { margin-left: auto; content: '＋'; color: #80917f; font-size: 15px; }
+.my-listing-bookings[open] summary::after { content: '−'; }
+.my-listing-bookings summary span { display: grid; min-width: 21px; height: 21px; place-items: center; margin: 0 9px; border-radius: var(--radius-pill); color: #55745f; background: #eef2e9; font-size: 9px; }
+.my-listing-bookings summary:focus-visible { outline: 3px solid rgba(140,168,139,.7); outline-offset: 2px; }
+.my-listing-bookings ul { display: grid; gap: 10px; margin: 0; padding: 0 0 2px; list-style: none; }
+.my-listing-booking { padding: 13px; border: 1px solid #edf0e9; border-radius: var(--radius-sm); background: #fffefa; }
+.my-listing-booking-top, .my-listing-booking-meta { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.my-listing-booking-top p { margin: 5px 0 0; color: var(--color-ink); font-size: 11px; font-weight: 600; }
+.my-listing-booking-status { padding: 5px 8px; border-radius: var(--radius-pill); color: #527259; background: #eff4e9; font-size: 8px; font-weight: 700; text-transform: capitalize; }
+.my-listing-booking-status.status-cancelled { color: #8e5c54; background: #fbefeb; }
+.my-listing-booking-status.status-returned { color: #68736a; background: #eff0ec; }
+.my-listing-booking-meta { align-items: center; margin-top: 10px; padding-top: 10px; border-top: 1px solid #f0f1eb; }
+.my-listing-booking-meta p { margin: 0; color: #77827a; font-size: 9px; }
+.my-listing-booking-meta strong { color: var(--color-forest); font-size: 10px; }
+.my-listing-return { min-height: 32px; margin-top: 11px; }
+.my-listing-no-bookings { margin: 0 0 13px; color: #77827a; font-size: 10px; }
+.my-listings-state { display: grid; justify-items: center; max-width: 590px; margin: 35px auto; padding: 45px 32px; border: 1px solid rgba(32,42,37,.07); border-radius: var(--radius-lg); background: var(--color-paper); text-align: center; box-shadow: var(--shadow-soft); }
+.my-listings-empty-mark { margin-bottom: 18px; color: #47755b; background: #f0f5e9; }
+.my-listings-state h2 { margin: 9px 0 7px; color: var(--color-ink); font: 500 27px var(--font-display); }
+.my-listings-state p { max-width: 390px; margin: 0 0 21px; color: #77827a; font-size: 11px; line-height: 1.8; }
+.my-listings-add-link { display: inline-flex; align-items: center; gap: 9px; min-height: 42px; padding: 0 18px; border-radius: var(--radius-sm); color: white; background: var(--color-forest); font-size: 11px; font-weight: 600; text-decoration: none; }
+.my-listings-add-link:hover { background: var(--color-forest-deep); }
+.my-listings-error { margin: 0 0 18px; padding: 12px 14px; border-radius: var(--radius-sm); color: var(--color-error); background: #fbf0ed; font-size: 11px; line-height: 1.6; }
+.my-listings-skeletons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.my-listing-skeleton { overflow: hidden; min-height: 300px; border-radius: var(--radius-md); background: var(--color-paper); box-shadow: var(--shadow-soft); }
+.my-listing-skeleton > span, .my-listing-skeleton i { position: relative; display: block; overflow: hidden; background: #e9ede5; }
+.my-listing-skeleton > span { height: 170px; }
+.my-listing-skeleton > div { display: grid; gap: 13px; padding: 20px; }
+.my-listing-skeleton i { height: 12px; border-radius: var(--radius-pill); }
+.my-listing-skeleton i:first-child { width: 64%; height: 20px; }
+.my-listing-skeleton i:nth-child(2) { width: 88%; }
+.my-listing-skeleton i:last-child { width: 52%; }
+.my-listing-skeleton > span::after, .my-listing-skeleton i::after { position: absolute; inset: 0; transform: translateX(-100%); background: linear-gradient(90deg, transparent, rgba(255,255,255,.65), transparent); animation: my-listings-shimmer 1.4s infinite; content: ''; }
+@keyframes my-listings-shimmer { to { transform: translateX(100%); } }
+@media (max-width: 760px) { .my-listings-page { min-height: calc(100vh - 112px); padding: 40px 18px 58px; }.my-listings-grid, .my-listings-skeletons { grid-template-columns: 1fr; gap: 15px; }.my-listing-photo-wrap { aspect-ratio: 1.8; } }
+@media (max-width: 520px) { .my-listings-page { padding-right: 14px; padding-left: 14px; }.my-listings-heading { margin-bottom: 22px; }.my-listing-content { padding: 17px; }.my-listing-title-row { flex-direction: column; }.my-listing-price { margin: 0; text-align: left; }.my-listing-photo-wrap { aspect-ratio: 1.45; }.my-listings-state { padding: 36px 23px; } }
+@media (prefers-reduced-motion: reduce) { .my-listing-skeleton > span::after, .my-listing-skeleton i::after { animation: none; } }
+
+.my-listing-booking-status.status-pending_payment { color: #765b22; background: #f8f0d9; }
+.my-listing-booking-status.status-picked_up { color: #315e7c; background: #eaf2f7; }
+.my-listing-booking-status.status-return_requested { color: #805626; background: #f8eee1; }
+.my-listing-cancel-booking { display: block; min-height: 30px; margin-top: 8px; padding: 0 10px; border: 1px solid #eadbd5; border-radius: 8px; color: #9b5147; background: #fffdfa; cursor: pointer; font: 600 9px var(--font-body); }
+.my-listing-cancel-booking:disabled { opacity: .6; cursor: wait; }

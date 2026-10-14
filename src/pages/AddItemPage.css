@@ -1,0 +1,110 @@
+/* Listing-only workspace layout and map styling. */
+.add-item-page {
+  min-height: calc(100vh - 72px);
+  padding: clamp(30px, 4vw, 56px) clamp(20px, 3vw, 44px) 64px;
+  color: #382315;
+  background: radial-gradient(ellipse at 10% 0%, rgba(232, 215, 195, .48), transparent 42%), #f7f2e9;
+}
+.add-item-page .add-item-container { width: min(100%, 1400px); max-width: 1400px; margin-inline: auto; }
+.add-item-page .add-item-heading { max-width: 840px; margin: 0 0 24px; text-align: left; animation: none; }
+.add-item-page .add-item-eyebrow { justify-content: flex-start; color: #805737; }
+.add-item-page .add-item-heading h1 { margin: 12px 0 8px; color: #382315; font: 500 clamp(38px, 4.6vw, 58px)/1.08 Georgia, 'Times New Roman', serif; letter-spacing: -.04em; }
+.add-item-page .add-item-heading h1 em { color: #8b6238; }
+.add-item-page .add-item-heading p { max-width: 650px; margin: 0; color: #786b5e; font-size: 14px; line-height: 1.7; }
+.add-item-page .listing-progress { width: 100%; max-width: none; gap: 12px; margin: 0 0 18px; }
+.add-item-page .listing-progress li { border-color: #e5d7c5; border-radius: 14px; color: #786b5e; background: rgba(255,253,248,.78); }
+.add-item-page .listing-progress li > span { color: #754526; background: #f1e7d8; font-size: 11px; }
+.add-item-page .listing-progress li.is-current { border-color: #c5a77f; color: #5b321b; background: #fffdf8; }
+.add-item-page .listing-progress li.is-current > span { color: #fffdf8; background: #5b321b; }
+.add-item-page .listing-progress li strong { font-size: 13px; }
+.add-item-page .listing-card { display: grid; grid-template-columns: minmax(0,1fr); align-items: start; row-gap: 0; padding: clamp(28px,3.4vw,48px); border-color: #e5d7c5; border-radius: 22px; background: #fffdf8; box-shadow: 0 18px 48px rgba(56,35,21,.075); animation: none; }
+.add-item-page .listing-card > .listing-section { min-width: 0; margin: 0; padding: 26px 0 0; border-top: 1px solid #e5d7c5; }
+.add-item-page .listing-card > .listing-section:nth-of-type(1) { grid-column: 1; padding-top: 0; border-top: 0; }
+.add-item-page .listing-card > .listing-section:nth-of-type(2), .add-item-page .listing-card > .listing-section:nth-of-type(3), .add-item-page .listing-card > .listing-section:nth-of-type(4), .add-item-page .listing-card > .listing-section:nth-of-type(5) { grid-column: 1; }
+.add-item-page .listing-card > .listing-section:nth-of-type(3) { grid-column: 2; }
+.add-item-page .listing-card > .listing-section:nth-of-type(4) { grid-column: 2; }
+.add-item-page .section-heading { gap: 13px; margin-bottom: 18px; }
+.add-item-page .section-number { width: 34px; height: 34px; border-color: #dec7a9; color: #754526; background: #f5eee4; font-size: 11px; font-weight: 750; }
+.add-item-page .section-heading h2 { margin: 0 0 5px; color: #382315; font: 600 23px/1.2 Georgia, 'Times New Roman', serif; }
+.add-item-page .section-heading p { color: #786b5e; font-size: 13px; }
+.add-item-page .listing-fields { gap: 16px 18px; padding-left: 0; }
+.add-item-page .item-details-fields { grid-template-columns: repeat(2, minmax(0,1fr)); }
+.add-item-page .rental-fields { grid-template-columns: minmax(0,1fr); }
+.add-item-page .availability-fields { grid-template-columns: repeat(2, minmax(0,1fr)); }
+.add-item-page .listing-fields .field label, .add-item-page .address-search-label { color: #493528; font-size: 13px; font-weight: 650; }
+.add-item-page .listing-fields .input-wrap input, .add-item-page .select-wrap select, .add-item-page .listing-fields textarea, .add-item-page .address-search-fallback { min-height: 48px; border-color: #ddcbb3; border-radius: 11px; color: #382315; background: #fffefa; font-size: 14px; }
+.add-item-page .listing-fields .input-wrap input:focus, .add-item-page .select-wrap select:focus, .add-item-page .listing-fields textarea:focus, .add-item-page .address-search-fallback:focus { border-color: #a77a4c; box-shadow: 0 0 0 3px rgba(167,122,76,.16); outline: none; }
+.add-item-page .listing-fields .input-wrap input::placeholder, .add-item-page .listing-fields textarea::placeholder { color: #9a8977; }
+.add-item-page .currency-prefix { color: #805737; }
+.add-item-page .label-optional { color: #8d7a67; }
+.add-item-page .photo-dropzone { min-height: 220px; margin-left: 0; border-color: #d7c3a8; border-radius: 16px; background: #fbf7ef; }
+.add-item-page .photo-dropzone:hover, .add-item-page .photo-dropzone.is-dragging { border-color: #b88b5a; background: #f5eee4; }
+.add-item-page .upload-icon { border-color: #ddc8ac; color: #754526; background: #f1e7d8; }
+.add-item-page .photo-prompt { color: #786b5e; font-size: 13px; }
+.add-item-page .photo-prompt strong { color: #493528; font-size: 14px; }
+.add-item-page .browse-link { color: #754526; }
+.add-item-page .photo-help { color: #8d7a67; font-size: 11px; }
+.add-item-page .photo-preview-name, .add-item-page .photo-ready-copy > span { color: #786b5e; font-size: 12px; }
+.add-item-page .photo-ready-copy > strong { color: #382315; font-size: 14px; }
+.add-item-page .photo-change, .add-item-page .photo-remove { font-size: 12px; }
+.add-item-page .listing-card > .listing-message, .add-item-page .listing-card > .listing-actions { grid-column: 1 / -1; }
+.add-item-page .listing-message { font-size: 14px; }
+.add-item-page .listing-actions { margin: 28px 0 0; padding-top: 22px; border-top: 1px solid #e5d7c5; }
+.add-item-page .listing-footnote, .add-item-page .add-item-trust { color: #786b5e; font-size: 12px; }
+.add-item-page .listing-submit { min-height: 48px; padding-inline: 22px; border-radius: 12px; color: #fffdf8; background: #4a3024; font-size: 14px; }
+.add-item-page .listing-submit:hover:not(:disabled) { background: #684632; }
+.add-item-page .mapbox-map-shell { margin-top: 4px; border-color: #ddc8ac; border-radius: 16px; background: #f1e7d8; box-shadow: 0 10px 28px rgba(56,35,21,.12); }
+.add-item-page .mapbox-view { width: 100%; height: 520px !important; min-height: 450px; background: #f1e7d8; }
+.add-item-page .mapbox-unconfigured { min-height: 180px; border-color: #ddc8ac; color: #654735; background: #fbf7ef; line-height: 1.6; }
+.add-item-page .mapbox-map-shell .mapboxgl-ctrl-group { border-color: #ddc8ac; border-radius: 10px; background: rgba(255,253,248,.98); box-shadow: 0 3px 12px rgba(56,35,21,.12); }
+.add-item-page .mapbox-map-shell .mapboxgl-ctrl-group button + button { border-top-color: #e5d7c5; }
+.add-item-page .mapbox-map-shell .mapboxgl-ctrl-group button:hover { background-color: #f1e7d8; }
+.add-item-page .mapbox-map-shell .mapboxgl-ctrl-attrib { color: #655343; background: rgba(255,253,248,.94); }
+.add-item-page .mapbox-map-shell .mapboxgl-ctrl-attrib a { color: #5b321b; }
+.add-item-page .location-map-error, .add-item-page .photo-error { color: #984d3f; font-size: 13px; line-height: 1.5; }
+.add-item-page .add-item-trust { margin-top: 18px; text-align: left; }
+@media (max-width: 900px) {
+  .add-item-page .listing-card { display: grid; grid-template-columns: minmax(0,1fr); align-items: start; row-gap: 0; padding: clamp(28px,3.4vw,48px); border-color: #e5d7c5; border-radius: 22px; background: #fffdf8; box-shadow: 0 18px 48px rgba(56,35,21,.075); animation: none; }
+  .add-item-page .listing-card > .listing-section:nth-of-type(n) { grid-column: 1; }
+  .add-item-page .listing-card > .listing-section:nth-of-type(1) { grid-column: 1; padding-top: 0; border-top: 0; }
+  .add-item-page .listing-card > .listing-section:nth-of-type(n + 2) { margin-top: 24px; padding-top: 24px; border-top: 1px solid #e5d7c5; }
+  .add-item-page .listing-card > .listing-message, .add-item-page .listing-card > .listing-actions { grid-column: 1; }
+}
+@media (max-width: 600px) {
+  .add-item-page { min-height: calc(100vh - 112px); padding: 34px 16px 44px; }
+  .add-item-page .add-item-heading { margin-bottom: 20px; }
+  .add-item-page .add-item-heading h1 { font-size: clamp(34px,9vw,44px); }
+  .add-item-page .add-item-heading p { font-size: 13px; }
+  .add-item-page .listing-progress { grid-template-columns: 1fr; gap: 8px; margin-bottom: 14px; }
+  .add-item-page .listing-progress li { min-height: 48px; padding: 8px 12px; }
+  .add-item-page .listing-card { display: grid; grid-template-columns: minmax(0,1fr); align-items: start; row-gap: 0; padding: clamp(28px,3.4vw,48px); border-color: #e5d7c5; border-radius: 22px; background: #fffdf8; box-shadow: 0 18px 48px rgba(56,35,21,.075); animation: none; }
+  .add-item-page .listing-card > .listing-section { padding-top: 20px; }
+  .add-item-page .listing-card > .listing-section:nth-of-type(1) { grid-column: 1; padding-top: 0; border-top: 0; }
+  .add-item-page .listing-fields { grid-template-columns: minmax(0,1fr); gap: 14px; }
+  .add-item-page .mapbox-view { height: 360px !important; min-height: 320px; }
+  .add-item-page .listing-full-width { grid-column: 1; }
+  .add-item-page .mapbox-view { min-height: 280px; }
+  .add-item-page .photo-dropzone { min-height: 190px; }
+  .add-item-page .photo-dropzone.has-preview { grid-template-columns: minmax(0,1fr); gap: 14px; }
+  .add-item-page .listing-actions { align-items: stretch; flex-direction: column-reverse; gap: 15px; }
+  .add-item-page .listing-submit { width: 100%; }
+  .add-item-page .listing-footnote { text-align: center; }
+  .add-item-page .add-item-trust { text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .add-item-page *, .add-item-page *::before, .add-item-page *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+/* Keep all major listing sections in a single vertical flow. */
+.add-item-page .listing-card { grid-template-columns: minmax(0,1fr); }
+.add-item-page .listing-card > .listing-section:nth-of-type(n) { grid-column: 1; }
+.add-item-page .listing-card > .listing-section:nth-of-type(n + 2) { margin-top: 26px; padding-top: 26px; border-top: 1px solid #e5d7c5; }
+.add-item-page .listing-card > .listing-section:nth-of-type(1) { margin-top: 0; padding-top: 0; border-top: 0; }
+.add-item-page .item-details-fields { grid-template-columns: repeat(2, minmax(0,1fr)); }
+.add-item-page .rental-fields { grid-template-columns: minmax(0,1fr); }
+.add-item-page .availability-fields { grid-template-columns: repeat(2, minmax(0,1fr)); }
+.add-item-page .mapbox-view { height: 520px !important; min-height: 450px; }
+.add-item-page .mapbox-unconfigured { min-height: 180px; border-color: #ddc8ac; color: #654735; background: #fbf7ef; line-height: 1.6; }
+@media (max-width: 600px) {
+  .add-item-page .item-details-fields, .add-item-page .availability-fields { grid-template-columns: minmax(0,1fr); }
+  .add-item-page .mapbox-view { height: 360px !important; min-height: 320px; }
+}

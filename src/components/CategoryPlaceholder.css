@@ -1,0 +1,13 @@
+.category-placeholder { position: absolute; inset: 0; display: grid; place-items: center; overflow: hidden; isolation: isolate; color: #587966; background: linear-gradient(145deg, #f5f2e9, #dfe9dc); }
+.category-placeholder-glow { position: absolute; top: 12%; right: 16%; width: 25%; aspect-ratio: 1; border-radius: 50%; background: rgba(255,255,255,.55); filter: blur(2px); }
+.category-placeholder-orbit { position: absolute; width: 68%; aspect-ratio: 1; border: 1px solid currentColor; border-radius: 50%; opacity: .13; box-shadow: 0 0 0 22px rgba(255,255,255,.13), 0 0 0 44px rgba(255,255,255,.1); transform: rotate(-24deg) scaleY(.67); }
+.category-placeholder > svg { position: relative; width: clamp(46px, 35%, 105px); height: auto; overflow: visible; fill: rgba(255,255,255,.23); stroke: currentColor; stroke-width: 1.1; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 8px 12px rgba(30,50,39,.08)); }
+.category-placeholder-label { position: absolute; bottom: 11px; color: currentColor; font-size: 8px; font-weight: 700; letter-spacing: 1.3px; opacity: .68; text-transform: uppercase; }
+.category-placeholder-camera { color: #637c68; background: linear-gradient(145deg, #f7f1e7, #dbe6d6 68%, #c8d9ca); }
+.category-placeholder-electronics { color: #526f79; background: linear-gradient(145deg, #eef4ed, #d5e5e4 65%, #c6d9d9); }
+.category-placeholder-calculator { color: #6d7860; background: linear-gradient(145deg, #f4f1e4, #e2e7d4 68%, #d2ddc4); }
+.category-placeholder-projector { color: #6c7180; background: linear-gradient(145deg, #f2eff1, #dddfeb 65%, #ced5e4); }
+.category-placeholder-bicycle { color: #5d7865; background: linear-gradient(145deg, #f5f1e5, #dce9d9 68%, #c6ddcd); }
+.category-placeholder-books { color: #826d57; background: linear-gradient(145deg, #f7efe4, #eadfd2 65%, #ded3c2); }
+.category-placeholder-other { color: #687b67; background: linear-gradient(145deg, #f4f1e8, #e0e8da 68%, #ceddcf); }
+.details-photo-frame > .category-placeholder { min-height: 100%; }

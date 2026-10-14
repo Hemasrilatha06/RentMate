@@ -1,0 +1,3 @@
+export default function SkeletonCard() {
+  return <article className="item-card skeleton-card" aria-hidden="true"><div className="skeleton-image" /><div className="skeleton-content"><div className="skeleton-line skeleton-category" /><div className="skeleton-line skeleton-title" /><div className="skeleton-line skeleton-location" /><div className="skeleton-divider" /><div className="skeleton-line skeleton-price" /></div></article>
+}

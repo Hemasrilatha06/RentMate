@@ -1,0 +1,7 @@
+.booking-review-area { padding: 13px 20px 17px; border-top: 1px solid #f0f1eb; }
+.booking-review-button { min-height: 36px; padding: 0 13px; border: 1px solid #dce6d7; border-radius: var(--radius-sm); color: var(--color-forest); background: #f5f7f1; cursor: pointer; font-size: 10px; font-weight: 700; }
+.booking-review-button:hover { background: #eaf0e4; }
+.booking-review-saved { position: relative; display: grid; grid-template-columns: auto 1fr; align-items: start; gap: 5px 12px; }
+.booking-review-saved > p { margin: 2px 0 0; color: #69766c; font-size: 10px; line-height: 1.65; }
+.booking-review-saved > .details-section-kicker { grid-column: 1 / -1; color: #95a095; font-size: 8px; }
+@media (max-width: 520px) { .booking-review-area { padding-right: 17px; padding-left: 17px; } }

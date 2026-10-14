@@ -1,0 +1,13 @@
+.star-rating { display: inline-flex; align-items: center; gap: 2px; vertical-align: middle; }
+.star-rating-star { position: relative; display: inline-block; width: 1em; height: 1em; flex: 0 0 1em; line-height: 1; }
+.star-rating-empty { display: block; width: 100%; height: 100%; overflow: visible; fill: none; stroke: #9aa896; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.star-rating-fill { position: absolute; inset: 0 auto 0 0; overflow: hidden; color: #c38b35; white-space: nowrap; }
+.star-rating-fill svg { display: block; width: 1em; height: 1em; max-width: none; fill: currentColor; stroke: currentColor; }
+.star-rating-small { font-size: 14px; }
+.star-rating-normal { font-size: 21px; }
+.star-rating-large { font-size: 27px; }
+.star-rating-input { gap: 5px; }
+.star-rating-choice { display: grid; place-items: center; padding: 2px; border: 0; border-radius: 5px; background: transparent; cursor: pointer; }
+.star-rating-choice:hover .star-rating-empty, .star-rating-choice:focus-visible .star-rating-empty { stroke: #9a6924; }
+.star-rating-choice:hover .star-rating-fill, .star-rating-choice:focus-visible .star-rating-fill { width: 100% !important; }
+.star-rating-choice:focus-visible { outline: 2px solid var(--color-moss); outline-offset: 2px; }
